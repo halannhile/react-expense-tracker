@@ -1,8 +1,8 @@
 import React from 'react';
-import './ExpenseItems.css'
+import './ExpenseItem.css'
 import ExpenseDate from './ExpenseDate';
 
-export default function ExpenseItems(props) {
+export default function ExpenseItem(props) {
   
 
   return (
