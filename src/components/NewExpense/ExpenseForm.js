@@ -3,23 +3,39 @@ import './ExpenseForm.css'
 import { useState } from 'react';
 
 export default function ExpenseForm() {
+
+    // MULTIPLE-STATE APPROACH: 
+
+    // const [userInput, setUserInput] = useState({
+    //     enteredTitle: '',
+    //     enteredAmount: '',
+    //     enteredDate: ''
+    // });
+
+    
+    // const titleChangeHandler = (event) => {
+    //     setUserInput((prevState) => {
+    //         return { ...prevState, enteredTitle: event.target.value };        
+    //     })
+    // };
+
+    // const amountChangeHandler = (event) => {
+    //     setUserInput((prevState) => {
+    //         return { ...prevState, enteredAmount: event.target.value };
+    //     })
+    // };
+
+    // const dateChangeHandler = (event) => {
+    //     setUserInput((prevState)=> {
+    //         return { ...prevState, enteredDate: event.target.value };
+    //     })
+    // };
+
+    
+    // MANY SINGLE STATES APPROACH: 
     const [enteredTitle, setEnteredTitle] = useState('');
-
-    const titleChangeHandler = (event) => {
-        setEnteredTitle(event.target.value);
-    };
-
     const [enteredAmount, setEnteredAmount] = useState('');
-
-    const amountChangeHandler = (event) => {
-        setEnteredAmount(event.target.value);
-    };
-
-    const [enteredDate, setEnteredDate] = useState('');
-
-    const dateChangeHandler = (event) => {
-        setEnteredDate(event.target.value);
-    };
+    const [enteredTitle, setEnteredTitle] = useState('');
 
   return (
     <form>
