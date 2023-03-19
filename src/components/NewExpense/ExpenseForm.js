@@ -35,14 +35,35 @@ export default function ExpenseForm() {
     // MANY SINGLE STATES APPROACH: 
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
-    const [enteredTitle, setEnteredTitle] = useState('');
+    const [enteredDate, setEnteredDate] = useState('');
+
+    const titleChangeHandler = (event) => {
+        setEnteredTitle(event.target.value);};
+    
+    const amountChangeHandler = (event) => {
+        setEnteredAmount(event.target.value);};
+
+    const dateChangeHandler = (event) => {
+        setEnteredDate(event.target.value);};
+    
+    const submitHandler = (event) => {
+        event.preventDefault();
+
+        const expenseData = {
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate) // parse date string and convert to Date object
+        };
+
+        console.log(expenseData);
+    };
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
         <div className="new-expense__controls">
             <div className="new-expense__control">
                 <label>Title</label>
-                <input type="text" onChange={titleChangeHandler}/>
+                <input type="text" value = {enteredTitle} onChange={titleChangeHandler}/>
             </div>
 
             <div className="new-expense__control">
