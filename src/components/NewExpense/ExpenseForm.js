@@ -2,7 +2,7 @@ import React from 'react'
 import './ExpenseForm.css'
 import { useState } from 'react';
 
-export default function ExpenseForm() {
+export default function ExpenseForm(props) {
 
     // MULTIPLE-STATE APPROACH: 
 
@@ -54,7 +54,7 @@ export default function ExpenseForm() {
             date: new Date(enteredDate) // parse date string and convert to Date object
         };
 
-        console.log(expenseData);
+        props.onSaveExpenseData(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
