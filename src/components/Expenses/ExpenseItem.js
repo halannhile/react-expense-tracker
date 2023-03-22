@@ -8,6 +8,13 @@ export default function ExpenseItem(props) {
 
   // const [title, setTitle] = useState(props.title);
 
+  // const clickHandler = () => {
+  //   // state updating function
+  //   // when triggered, will not only assign new value to a variable
+  //   // but also trigger the Component function to be run again
+  //   setTitle('Updated!');
+  //   console.log(title);
+  // };
 
   return (
     // component function: 
