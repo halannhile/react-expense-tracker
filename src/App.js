@@ -17,9 +17,7 @@ function App() {
   const addExpenseHandler = (expense) => {
     // note: since the new array should depend on the previous state of the array, this approach is not recommended
     // setExpenses([expense, ...expenses])
-    
-    // recommended approach:
-    // spread operator can also be used in arrays, not just objects
+
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses]
     })
