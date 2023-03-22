@@ -14,7 +14,6 @@ export default function Expenses(props) {
       expense.date.getFullYear().toString() === filteredYear
     );
   }
-    
   
   const filterChangeHandler = selectedYear => {
     setFilteredYear(selectedYear);
@@ -28,7 +27,6 @@ export default function Expenses(props) {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-
 
         {filteredExpenses.map((expense) => (
           <ExpenseItem
