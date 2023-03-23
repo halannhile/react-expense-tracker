@@ -60,6 +60,11 @@ export default function ExpenseForm(props) {
         setEnteredDate('');
     };
 
+    // Add new expense button: child to parent 
+    const  buttonClickHandler = () => {
+      props.onClickButton(false)
+    }
+
   return (
     <form onSubmit={submitHandler}>
       <div className='new-expense__controls'>
@@ -93,7 +98,7 @@ export default function ExpenseForm(props) {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button>Cancel</button>
+        <button onClick={buttonClickHandler}>Cancel</button>
         <button type='submit'>Add Expense</button>
       </div>
       

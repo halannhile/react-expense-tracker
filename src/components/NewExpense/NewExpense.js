@@ -19,12 +19,19 @@ export default function NewExpense(props) {
     setIsAddingExpenses(true)
   };
 
+  // to communicate up from ExpenseForm child to NewExpense parent: 
+  // child is passing the value for isAddingExpenseReset to parent
+  const addexpenseButtonClickHandler = isAddingExpenseReset => {
+    setIsAddingExpenses(isAddingExpenseReset)
+  };
+
   let formContent = <button onClick={clickAddExpenseHandle}>Add new expense</button>;
 
   if (isAddingExpense) {
     formContent = 
-    <ExpenseForm onSaveExpenseData = {onSaveExpenseDataHandler}/>
+    <ExpenseForm onSaveExpenseData = {onSaveExpenseDataHandler} onClickButton = {addexpenseButtonClickHandler}/>
   };
+
 
   return (
     <div className = "new-expense">
