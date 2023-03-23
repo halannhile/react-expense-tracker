@@ -21,7 +21,7 @@ export default function Expenses(props) {
   };
 
   return (
-    <div>
+      <li>
       <Card className='expenses'>
 
         <ExpensesFilter
@@ -32,7 +32,7 @@ export default function Expenses(props) {
         <ExpensesList items={filteredExpenses}/>
 
       </Card>
-    </div>
+      </li>
   )
 }
 
