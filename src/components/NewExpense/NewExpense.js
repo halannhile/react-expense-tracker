@@ -13,6 +13,7 @@ export default function NewExpense(props) {
       props.onAddExpense(expenseData);
   };
 
+  // *** State for Add New Expense button: ***
   const [isAddingExpense, setIsAddingExpenses] = useState(false);
 
   const clickAddExpenseHandle = () => {
