@@ -19,7 +19,7 @@ export default function NewExpense(props) {
     setIsAddingExpenses(true)
   };
 
-  let formContent;
+  let formContent = <button onClick={clickAddExpenseHandle}>Add new expense</button>;
 
   if (isAddingExpense) {
     formContent = 
@@ -28,7 +28,6 @@ export default function NewExpense(props) {
 
   return (
     <div className = "new-expense">
-        <button onClick={clickAddExpenseHandle}>Add new expense</button>
         {formContent}
     </div>
   )
