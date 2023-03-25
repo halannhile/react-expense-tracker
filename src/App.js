@@ -4,10 +4,10 @@ import { useState } from "react";
 
 // dummy data to initialize our data with
 const DUMMY_EXPENSES = [
-  {id: "e1", title: "Car Insurance", amount: 194.67, date: new Date(Date.now())},
-  {id: "e2", title: "House Insurance", amount: 194.67, date: new Date(2020, 7, 17)},
-  {id: "e3", title: "Health Insurance", amount: 194.67, date: new Date(2021, 9, 17)},
-  {id: "e4", title: "General Insurance", amount: 194.67, date: new Date(2022, 3, 17)}
+  {id: "e1", title: "Car Insurance", amount: 150, date: new Date(Date.now())},
+  {id: "e2", title: "House Insurance", amount: 200, date: new Date(2020, 7, 17)},
+  {id: "e3", title: "Health Insurance", amount: 90, date: new Date(2021, 9, 17)},
+  {id: "e4", title: "Superannuation", amount: 130, date: new Date(2022, 3, 17)}
 ];
 
 function App() {
