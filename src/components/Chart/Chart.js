@@ -22,7 +22,7 @@ export default function Chart(props) {
                 // note: to use label as key, label must be unique to each chartbar
                 key={dataPoint.label}
                 value={dataPoint.value} 
-                maxValue={null} 
+                maxValue={totalMaximum} 
                 label={dataPoint.label}/>
         ))}
     </div>
